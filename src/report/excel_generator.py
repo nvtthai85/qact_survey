@@ -47,11 +47,25 @@ def fill_fpt_template(
                 break
         if col_nganh:
             dssv_df = dssv_df.copy()
-            dssv_df["_Major_Norm"] = dssv_df[col_nganh].apply(lambda x: 
-                "Công nghệ thông tin" if any(k in str(x).lower() for k in ["it", "công nghệ", "cntt", "information"]) else
-                "Quản trị kinh doanh" if any(k in str(x).lower() for k in ["business", "kinh tế", "quản trị", "qtkd"]) else
-                "Ngôn ngữ" if any(k in str(x).lower() for k in ["ngôn ngữ", "language", "nna", "nnh", "nnt"]) else "Khác"
-            )
+            def _normalize_major(x):
+                val = str(x).strip().upper()
+                if val.startswith("BIT") or any(k in val for k in ["CNTT", "IT", "SE", "GD", "IA", "AI", "KTPM", "DESIGN"]):
+                    return "Công nghệ thông tin"
+                if val.startswith("BBA") or any(k in val for k in ["QTKD", "BIZ", "BUS", "MKT", "IB", "MC", "HA", "HM", "TÀI CHÍNH", "MARKETING"]):
+                    return "Quản trị kinh doanh"
+                if val.startswith("BEN") or any(k in val for k in ["NNA", "NNH", "NNK", "NNT", "ENGLISH", "LANGUAGE", "NGÔN NGỮ"]):
+                    return "Ngôn ngữ"
+                
+                val_lower = val.lower()
+                if any(k in val_lower for k in ["it", "công nghệ", "cntt", "information", "phần mềm", "đồ họa"]):
+                    return "Công nghệ thông tin"
+                if any(k in val_lower for k in ["business", "kinh tế", "quản trị", "qtkd", "marketing", "kinh doanh"]):
+                    return "Quản trị kinh doanh"
+                if any(k in val_lower for k in ["ngôn ngữ", "language", "nna", "nnh", "nnt", "tiếng anh", "tiếng nhật", "tiếng hàn"]):
+                    return "Ngôn ngữ"
+                return "Khác"
+
+            dssv_df["_Major_Norm"] = dssv_df[col_nganh].apply(_normalize_major)
             sv_cntt = (dssv_df["_Major_Norm"] == "Công nghệ thông tin").sum()
             sv_biz  = (dssv_df["_Major_Norm"] == "Quản trị kinh doanh").sum()
             sv_lang = (dssv_df["_Major_Norm"] == "Ngôn ngữ").sum()
