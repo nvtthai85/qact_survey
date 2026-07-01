@@ -31,44 +31,43 @@ st.markdown("""
 /* Base */
 html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 
-/* Dark Premium Background (Vercel/Linear style) */
+/* Vibrant Clean Light Background */
 .stApp {
-    background-color: #0b0f19 !important;
-    color: #f3f4f6 !important;
+    background-color: #f8fafc !important;
+    color: #0f172a !important;
 }
 
 /* Sidebar */
 [data-testid="stSidebar"] {
-    background-color: #111827 !important;
-    border-right: 1px solid rgba(255,255,255,0.06) !important;
+    background-color: #ffffff !important;
+    border-right: 1px solid #e2e8f0 !important;
 }
 
 /* Cards */
 .metric-card {
-    background: #1f2937 !important;
-    border: 1px solid rgba(255,255,255,0.08) !important;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
     border-radius: 16px !important;
     padding: 20px 24px !important;
     text-align: center !important;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
     transition: all 0.3s ease !important;
 }
 .metric-card:hover {
-    background: #374151 !important;
     transform: translateY(-2px) !important;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4) !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04) !important;
 }
 .metric-number {
     font-size: 2.4rem !important;
     font-weight: 800 !important;
-    background: linear-gradient(135deg, #38bdf8, #6366f1) !important;
+    background: linear-gradient(135deg, #ff6b00, #ec4899) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     line-height: 1.1 !important;
 }
 .metric-label {
     font-size: 0.82rem !important;
-    color: #9ca3af !important;
+    color: #475569 !important;
     margin-top: 6px !important;
     font-weight: 600 !important;
     letter-spacing: 0.5px !important;
@@ -82,16 +81,16 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
     gap: 10px !important;
     font-size: 1.25rem !important;
     font-weight: 700 !important;
-    color: #ffffff !important;
+    color: #0f172a !important;
     margin: 28px 0 16px 0 !important;
     padding-bottom: 10px !important;
-    border-bottom: 2px solid rgba(255,255,255,0.08) !important;
+    border-bottom: 2px solid #ff6b00 !important;
 }
 
 /* Executive summary */
 .exec-card {
-    background: #1e1b4b !important;
-    border: 1px solid rgba(99,102,241,0.3) !important;
+    background: linear-gradient(135deg, rgba(255,107,0,0.06), rgba(236,72,153,0.03)) !important;
+    border: 1px solid rgba(255,107,0,0.2) !important;
     border-radius: 20px !important;
     padding: 28px 32px !important;
     margin-bottom: 24px !important;
@@ -99,84 +98,84 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 .exec-headline {
     font-size: 1.5rem !important;
     font-weight: 800 !important;
-    color: #818cf8 !important;
+    color: #ff6b00 !important;
     margin-bottom: 12px !important;
 }
 .exec-overview { 
-    color: #e5e7eb !important; 
+    color: #334155 !important; 
     line-height: 1.7 !important; 
 }
 
 /* Insight chips */
 .insight-chip {
     display: inline-block !important;
-    background: rgba(99,102,241,0.2) !important;
-    border: 1px solid rgba(99,102,241,0.4) !important;
+    background: rgba(255,107,0,0.08) !important;
+    border: 1px solid rgba(255,107,0,0.25) !important;
     border-radius: 20px !important;
     padding: 4px 14px !important;
     font-size: 0.8rem !important;
-    color: #a5b4fc !important;
+    color: #d97706 !important;
     margin: 3px !important;
     font-weight: 500 !important;
 }
 
 /* Strength / Bottleneck cards */
 .strength-item {
-    background: rgba(16,185,129,0.1) !important;
+    background: #ecfdf5 !important;
     border-left: 4px solid #10b981 !important;
     border-radius: 8px !important;
     padding: 14px 18px !important;
     margin-bottom: 10px !important;
-    color: #d1fae5 !important;
+    color: #065f46 !important;
     font-weight: 500 !important;
 }
 .bottleneck-item {
-    background: rgba(239,68,68,0.1) !important;
+    background: #fef2f2 !important;
     border-left: 4px solid #ef4444 !important;
     border-radius: 8px !important;
     padding: 14px 18px !important;
     margin-bottom: 10px !important;
-    color: #fee2e2 !important;
+    color: #991b1b !important;
     font-weight: 500 !important;
 }
 .watch-item {
-    background: rgba(245,158,11,0.1) !important;
+    background: #fffbeb !important;
     border-left: 4px solid #f59e0b !important;
     border-radius: 8px !important;
     padding: 14px 18px !important;
     margin-bottom: 10px !important;
-    color: #fef3c7 !important;
+    color: #92400e !important;
     font-weight: 500 !important;
 }
 
 /* Checklist rows */
-.checklist-ok       { color: #34d399 !important; font-weight: 700 !important; }
-.checklist-warning  { color: #fbbf24 !important; font-weight: 700 !important; }
-.checklist-critical { color: #f87171 !important; font-weight: 800 !important; }
+.checklist-ok       { color: #059669 !important; font-weight: 700 !important; }
+.checklist-warning  { color: #d97706 !important; font-weight: 700 !important; }
+.checklist-critical { color: #dc2626 !important; font-weight: 800 !important; }
 
 /* Action cards */
-.action-high   { border-left: 4px solid #ef4444 !important; background: rgba(239,68,68,0.08) !important; color: #fee2e2 !important; }
-.action-medium { border-left: 4px solid #f59e0b !important; background: rgba(245,158,11,0.08) !important; color: #fef3c7 !important; }
-.action-low    { border-left: 4px solid #10b981 !important; background: rgba(16,185,129,0.08) !important; color: #d1fae5 !important; }
+.action-high   { border-left: 4px solid #ef4444 !important; background: #fef2f2 !important; color: #991b1b !important; }
+.action-medium { border-left: 4px solid #f59e0b !important; background: #fffbeb !important; color: #92400e !important; }
+.action-low    { border-left: 4px solid #10b981 !important; background: #ecfdf5 !important; color: #065f46 !important; }
 .action-card   { border-radius: 10px !important; padding: 14px 18px !important; margin-bottom: 10px !important; font-weight: 500 !important; }
 
 /* Plotly chart bg */
 .js-plotly-plot .plotly .bg { fill: transparent !important; }
 
 /* Upload zone */
-.uploadedFile { background: rgba(255,255,255,0.05) !important; border: 1px solid rgba(255,255,255,0.08) !important; border-radius: 12px !important; }
+.uploadedFile { background: #ffffff !important; border: 1px solid #e2e8f0 !important; border-radius: 12px !important; }
 
 /* Progress bar */
-.stProgress > div > div { background: linear-gradient(90deg, #38bdf8, #6366f1) !important; }
+.stProgress > div > div { background: linear-gradient(90deg, #ff6b00, #ec4899) !important; }
 
 /* Tabs */
 .stTabs [data-baseweb="tab"] {
-    color: #9ca3af !important;
+    color: #64748b !important;
     font-weight: 600 !important;
 }
 .stTabs [aria-selected="true"] {
-    color: #6366f1 !important;
-    border-bottom-color: #6366f1 !important;
+    color: #ff6b00 !important;
+    border-bottom-color: #ff6b00 !important;
 }
 
 /* Sidebar texts brightness */
@@ -188,23 +187,85 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 [data-testid="stSidebar"] .stMarkdown h1,
 [data-testid="stSidebar"] .stMarkdown h2,
 [data-testid="stSidebar"] .stMarkdown h3 {
-    color: #f3f4f6 !important;
-    font-weight: 500 !important;
+    color: #1e293b !important;
+    font-weight: 600 !important;
 }
 [data-testid="stSidebar"] strong {
-    color: #ffffff !important;
-    font-weight: 700 !important;
+    color: #0f172a !important;
+    font-weight: 800 !important;
 }
 
-/* Native widgets text color override for dark mode */
-div[data-baseweb="input"] input, 
-div[data-baseweb="select"] div,
-div[role="combobox"] span,
-.stSelectbox div {
+/* Fail-proof widget styling for Streamlit Cloud (preventing invisible text in light theme) */
+div[data-baseweb="input"] {
+    background-color: #f1f5f9 !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 8px !important;
+}
+div[data-baseweb="input"] input {
+    color: #0f172a !important;
+}
+div[data-baseweb="select"] > div {
+    background-color: #f1f5f9 !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 8px !important;
+}
+div[data-baseweb="select"] span,
+div[data-baseweb="select"] div {
+    color: #0f172a !important;
+}
+div[role="listbox"] {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    border: 1px solid #cbd5e1 !important;
+}
+div[role="option"] {
+    color: #0f172a !important;
+}
+
+/* File Uploader override */
+div[data-testid="stFileUploader"] {
+    background-color: #f8fafc !important;
+    border: 1px dashed #cbd5e1 !important;
+    border-radius: 12px !important;
+    padding: 12px !important;
+}
+div[data-testid="stFileUploader"] section,
+div[data-testid="stFileUploaderDropzone"] {
+    background-color: transparent !important;
+    background: transparent !important;
+    border: none !important;
+}
+div[data-testid="stFileUploader"] label p,
+div[data-testid="stFileUploader"] div,
+div[data-testid="stFileUploader"] span,
+div[data-testid="stFileUploader"] small,
+div[data-testid="stFileUploaderDropzone"] p,
+div[data-testid="stFileUploaderDropzone"] span {
+    color: #334155 !important;
+}
+
+/* Button overrides for light mode */
+button[data-testid="stBaseButton-secondary"] {
+    background-color: #ffffff !important;
+    color: #1e293b !important;
+    border: 1px solid #cbd5e1 !important;
+}
+button[data-testid="stBaseButton-secondary"]:hover {
+    background-color: #f1f5f9 !important;
+    border-color: #94a3b8 !important;
+    color: #0f172a !important;
+}
+button[data-testid="stBaseButton-primary"] {
+    background-color: #ff6b00 !important;
     color: #ffffff !important;
 }
-h1, h2, h3, h4, h5, h6 {
+button[data-testid="stBaseButton-primary"]:hover {
+    background-color: #e05e00 !important;
     color: #ffffff !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #0f172a !important;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -229,7 +290,7 @@ CHART_COLORS = {
 PLOTLY_LAYOUT = dict(
     paper_bgcolor="rgba(0,0,0,0)",
     plot_bgcolor="rgba(0,0,0,0)",
-    font=dict(family="Inter", color="#f3f4f6"),
+    font=dict(family="Inter", color="#0f172a"),
     margin=dict(t=40, b=20, l=20, r=20),
 )
 
@@ -331,14 +392,14 @@ with st.sidebar:
     5. Tab **🤖 Phân tích Góp ý** — AI gom nhóm ý kiến
     """)
     st.markdown("---")
-    st.markdown("<small style='color:#f3f4f6;font-weight:600'>v2.0 - QA FECT</small>", unsafe_allow_html=True)
+    st.markdown("<small style='color:#64748b;font-weight:600'>v2.1 - QA FECT</small>", unsafe_allow_html=True)
 
 
 # ══════════════════════════════════════════════════════════════
 # MAIN CONTENT
 # ══════════════════════════════════════════════════════════════
 st.markdown("# 🎓 AI Survey Analytics Dashboard")
-st.markdown("<p style='color:#9ca3af;margin-top:-10px'>Phân tích khảo sát sinh viên thông minh với AI · Insight · Cảm xúc · Cảnh báo</p>", unsafe_allow_html=True)
+st.markdown("<p style='color:#475569;margin-top:-10px'>Phân tích khảo sát sinh viên thông minh với AI · Insight · Cảm xúc · Cảnh báo</p>", unsafe_allow_html=True)
 st.markdown("---")
 
 # ── Determine file path ───────────────────────────────────────
@@ -403,8 +464,8 @@ elif not filepath:
         with col:
             st.markdown(f"""<div class='metric-card'>
                 <div style='font-size:2rem'>{icon}</div>
-                <div style='font-weight:700;color:#818cf8;margin:8px 0 4px'>{title}</div>
-                <div style='font-size:0.82rem;color:#9ca3af'>{desc}</div>
+                <div style='font-weight:700;color:#ff6b00;margin:8px 0 4px'>{title}</div>
+                <div style='font-size:0.82rem;color:#475569'>{desc}</div>
             </div>""", unsafe_allow_html=True)
     st.stop()
 
@@ -481,13 +542,13 @@ with tab1:
     if top_insights:
         st.markdown("<div class='section-header'>🏆 Top Insight Quan Trọng</div>", unsafe_allow_html=True)
         for ins in top_insights:
-            impact_color = {"high": "#f87171", "medium": "#fbbf24", "low": "#34d399"}.get(ins.get("impact","low"), "#60a5fa")
+            impact_color = {"high": "#ef4444", "medium": "#f59e0b", "low": "#10b981"}.get(ins.get("impact","low"), "#2563eb")
             st.markdown(f"""
-            <div style='background:rgba(255,255,255,0.05);border-radius:10px;padding:14px 18px;
+            <div style='background:rgba(0,0,0,0.03);border-radius:10px;padding:14px 18px;
                         margin-bottom:10px;border-left:4px solid {impact_color}'>
                 <span style='color:{impact_color};font-weight:700'>#{ins.get('rank','')}</span>
-                <span style='color:#e0e0e0;margin-left:10px'>{ins.get('insight','')}</span>
-                <span style='float:right;font-size:0.75rem;color:rgba(255,255,255,0.4)'>{ins.get('impact','').upper()}</span>
+                <span style='color:#0f172a;margin-left:10px;font-weight:500'>{ins.get('insight','')}</span>
+                <span style='float:right;font-size:0.75rem;color:#64748b;font-weight:600'>{ins.get('impact','').upper()}</span>
             </div>""", unsafe_allow_html=True)
 
     col_l, col_r = st.columns(2)
@@ -501,7 +562,7 @@ with tab1:
             hole=0.45,
         )
         fig_major.update_layout(**PLOTLY_LAYOUT, showlegend=True,
-                                 legend=dict(font=dict(color="#e0e0e0")))
+                                 legend=dict(font=dict(color="#0f172a")))
         fig_major.update_traces(textfont_color="white", textfont_size=13)
         st.plotly_chart(fig_major, use_container_width=True)
 
@@ -509,18 +570,18 @@ with tab1:
         st.markdown("<div class='section-header'>📈 Điểm trung bình theo tiêu chí</div>", unsafe_allow_html=True)
         q_labels = [v for v in QUESTION_MAP.values()]
         q_avgs   = [q_stats[q]["avg"] if q in q_stats else 0 for q in QUESTION_MAP]
-        colors   = ["#34d399" if s >= 4.2 else "#fbbf24" if s >= 3.8 else "#f87171" for s in q_avgs]
+        colors   = ["#10b981" if s >= 4.2 else "#f59e0b" if s >= 3.8 else "#ef4444" for s in q_avgs]
 
         fig_bar = go.Figure(go.Bar(
             x=q_labels, y=q_avgs,
             marker_color=colors,
             text=[f"{v:.2f}" for v in q_avgs],
             textposition="outside",
-            textfont=dict(color="#e0e0e0", size=12),
+            textfont=dict(color="#0f172a", size=12),
         ))
         fig_bar.update_layout(
             **PLOTLY_LAYOUT,
-            yaxis=dict(range=[0, 5.5], gridcolor="rgba(255,255,255,0.08)"),
+            yaxis=dict(range=[0, 5.5], gridcolor="#e2e8f0"),
             xaxis=dict(tickangle=-30),
         )
         st.plotly_chart(fig_bar, use_container_width=True)
@@ -550,8 +611,8 @@ with tab2:
                                textposition="inside", textfont=dict(color="white", size=11)))
     fig_sent.update_layout(**PLOTLY_LAYOUT, barmode="stack",
                             xaxis=dict(tickangle=-30),
-                            yaxis=dict(title="Tỷ lệ %", gridcolor="rgba(255,255,255,0.08)"),
-                            legend=dict(font=dict(color="#e0e0e0")))
+                            yaxis=dict(title="Tỷ lệ %", gridcolor="#e2e8f0"),
+                            legend=dict(font=dict(color="#0f172a")))
     st.plotly_chart(fig_sent, use_container_width=True)
 
     # Radar chart
@@ -573,9 +634,9 @@ with tab2:
             polar=dict(
                 bgcolor="rgba(0,0,0,0)",
                 radialaxis=dict(visible=True, range=[0, 5],
-                                gridcolor="rgba(255,255,255,0.15)",
-                                tickfont=dict(color="rgba(255,255,255,0.5)", size=9)),
-                angularaxis=dict(tickfont=dict(color="#e0e0e0", size=10)),
+                                gridcolor="#e2e8f0",
+                                tickfont=dict(color="#475569", size=9)),
+                angularaxis=dict(tickfont=dict(color="#0f172a", size=10)),
             ),
         )
         st.plotly_chart(fig_radar, use_container_width=True)
@@ -594,7 +655,7 @@ with tab2:
                 hole=0.5,
             )
             fig_ai.update_layout(**PLOTLY_LAYOUT, showlegend=True,
-                                  legend=dict(font=dict(color="#e0e0e0")))
+                                  legend=dict(font=dict(color="#0f172a")))
             fig_ai.update_traces(textfont_color="white")
             st.plotly_chart(fig_ai, use_container_width=True)
         else:
@@ -636,10 +697,10 @@ with tab3:
     col_i1, col_i2 = st.columns([2, 1])
     with col_i1:
         st.markdown(f"""<div class='exec-card'>
-            <div style='font-size:1rem;font-weight:700;color:#a78bfa;margin-bottom:8px'>
+            <div style='font-size:1rem;font-weight:700;color:#ff6b00;margin-bottom:8px'>
                 📌 Tóm tắt: {QUESTION_MAP[selected_q]}
             </div>
-            <div style='color:rgba(255,255,255,0.85);line-height:1.7'>
+            <div style='color:#334155;line-height:1.7;font-weight:500'>
                 {ins.get('summary', 'Không có dữ liệu')}
             </div>
         </div>""", unsafe_allow_html=True)
@@ -650,27 +711,19 @@ with tab3:
             st.markdown("**📂 Các chủ đề nổi bật:**")
             topic_df = pd.DataFrame(topics)
             if "topic" in topic_df.columns and "count" in topic_df.columns:
-                color_map = {"positive": "#34d399", "negative": "#f87171", "neutral": "#60a5fa"}
-                topic_df["color"] = topic_df.get("sentiment", "neutral").map(color_map) if "sentiment" in topic_df.columns else "#60a5fa"
+                color_map = {"positive": "#10b981", "negative": "#ef4444", "neutral": "#3b82f6"}
+                topic_df["color"] = topic_df.get("sentiment", "neutral").map(color_map) if "sentiment" in topic_df.columns else "#3b82f6"
                 fig_topics = px.bar(
                     topic_df.sort_values("count", ascending=True).tail(8),
                     x="count", y="topic", orientation="h",
-                    color="count", color_continuous_scale=["#4338ca", "#a78bfa"],
+                    color="count", color_continuous_scale=["#ff6b00", "#ffb900"],
                 )
                 fig_topics.update_layout(**PLOTLY_LAYOUT,
-                                         xaxis=dict(gridcolor="rgba(255,255,255,0.08)"),
+                                         xaxis=dict(gridcolor="#e2e8f0"),
                                          coloraxis_showscale=False)
                 st.plotly_chart(fig_topics, use_container_width=True)
 
     with col_i2:
-        # Keywords
-        keywords = ins.get("keywords", [])
-        if keywords:
-            st.markdown("**🏷️ Từ khoá quan trọng:**")
-            chips_html = " ".join([f"<span class='insight-chip'>{k}</span>" for k in keywords])
-            st.markdown(chips_html, unsafe_allow_html=True)
-
-        st.markdown("<br>", unsafe_allow_html=True)
         pos_themes = ins.get("positive_themes", [])
         neg_themes = ins.get("negative_themes", [])
 
@@ -726,45 +779,8 @@ with tab4:
                 <b>{w['label']}</b> · ⭐ {w['avg']}/5 · Tiêu cực: {w['neg_rate']}%
             </div>""", unsafe_allow_html=True)
 
-    # Scatter: avg vs neg_rate
-    st.markdown("<div class='section-header'>📊 Bản đồ Điểm mạnh – Điểm nghẽn</div>", unsafe_allow_html=True)
-    scatter_data = [
-        {
-            "Tiêu chí": v["label"],
-            "Điểm TB": v["avg"],
-            "% Tiêu cực": v["neg_rate"],
-            "% Tích cực": v["pos_rate"],
-            "Loại": (
-                "💪 Điểm mạnh" if v["avg"] >= 4.2 and v["pos_rate"] >= 70
-                else "🔴 Điểm nghẽn" if v["avg"] < 3.5 or v["neg_rate"] >= 20
-                else "⚠️ Theo dõi"
-            ),
-        }
-        for k, v in q_stats.items()
-    ]
-    scatter_df = pd.DataFrame(scatter_data)
-    color_map_cat = {
-        "💪 Điểm mạnh": "#34d399",
-        "🔴 Điểm nghẽn": "#f87171",
-        "⚠️ Theo dõi":   "#fbbf24",
-    }
-    fig_scatter = px.scatter(
-        scatter_df,
-        x="% Tiêu cực", y="Điểm TB",
-        text="Tiêu chí", color="Loại",
-        color_discrete_map=color_map_cat,
-        size_max=20,
-    )
-    fig_scatter.update_traces(textposition="top center", textfont=dict(size=11, color="#e0e0e0"),
-                               marker=dict(size=14))
-    fig_scatter.update_layout(
-        **PLOTLY_LAYOUT,
-        xaxis=dict(title="% Phản hồi tiêu cực", gridcolor="rgba(255,255,255,0.08)"),
-        yaxis=dict(title="Điểm trung bình /5", range=[2.5, 5.5],
-                   gridcolor="rgba(255,255,255,0.08)"),
-        legend=dict(font=dict(color="#e0e0e0")),
-    )
-    st.plotly_chart(fig_scatter, use_container_width=True)
+
+
 
 
 # ═══════════════════════════════════════════════════════════
@@ -819,14 +835,14 @@ with tab5:
                     padding:18px 22px;margin-bottom:12px;display:flex;align-items:center;gap:20px;flex-wrap:wrap'>
             <div style='font-size:1.6rem'>{item['icon']}</div>
             <div style='flex:1;min-width:200px'>
-                <div style='font-weight:700;color:#ffffff;font-size:1rem'>{item['group']}</div>
-                <div style='color:rgba(255,255,255,0.7);font-size:0.82rem;margin-top:2px'>{item['kpi_name']}</div>
+                <div style='font-weight:700;color:#0f172a;font-size:1rem'>{item['group']}</div>
+                <div style='color:#475569;font-size:0.82rem;margin-top:2px'>{item['kpi_name']}</div>
             </div>
             <div style='text-align:center;min-width:80px'>
-                <div style='font-size:1.4rem;font-weight:800;color:#ffffff'>
+                <div style='font-size:1.4rem;font-weight:800;color:#0f172a'>
                     {item['kpi_value']}{item['unit']}
                 </div>
-                <div style='font-size:0.75rem;color:rgba(255,255,255,0.5)'>Giá trị hiện tại</div>
+                <div style='font-size:0.75rem;color:#64748b'>Giá trị hiện tại</div>
             </div>
             <div style='text-align:right;min-width:220px'>
                 <div class='{status_style}' style='font-size:1rem'>{item['status_icon']} {item['alert']}</div>
@@ -845,12 +861,12 @@ with tab5:
             fig_g = go.Figure(go.Indicator(
                 mode="gauge+number",
                 value=item["kpi_value"],
-                title={"text": item["group"][:20], "font": {"size": 11, "color": "#e0e0e0"}},
+                title={"text": item["group"][:20], "font": {"size": 11, "color": "#0f172a"}},
                 gauge={
-                    "axis": {"range": [0, max_val], "tickcolor": "#e0e0e0"},
+                    "axis": {"range": [0, max_val], "tickcolor": "#0f172a"},
                     "bar":  {"color": color},
-                    "bgcolor": "rgba(255,255,255,0.05)",
-                    "bordercolor": "rgba(255,255,255,0.1)",
+                    "bgcolor": "rgba(0,0,0,0.05)",
+                    "bordercolor": "rgba(0,0,0,0.1)",
                     "steps": [
                         {"range": [0, threshold * 0.7], "color": "rgba(52,211,153,0.15)"},
                         {"range": [threshold * 0.7, threshold], "color": "rgba(251,191,36,0.15)"},
@@ -872,8 +888,8 @@ with tab6:
 
     if exec_sum.get("key_action"):
         st.markdown(f"""<div class='exec-card'>
-            <div style='font-size:0.85rem;color:#818cf8;font-weight:600;margin-bottom:6px'>🎯 HÀNH ĐỘNG ƯU TIÊN CAO NHẤT</div>
-            <div style='color:#ffffff;font-size:1.05rem;font-weight:600'>{exec_sum['key_action']}</div>
+            <div style='font-size:0.85rem;color:#ff6b00;font-weight:600;margin-bottom:6px'>🎯 HÀNH ĐỘNG ƯU TIÊN CAO NHẤT</div>
+            <div style='color:#0f172a;font-size:1.05rem;font-weight:600'>{exec_sum['key_action']}</div>
         </div>""", unsafe_allow_html=True)
 
     if actions:
@@ -888,10 +904,10 @@ with tab6:
 
             st.markdown(f"""<div class='{css_class}'>
                 <div style='display:flex;justify-content:space-between;align-items:center;margin-bottom:6px'>
-                    <span style='font-weight:700;color:#ffffff'>{act.get('action','')}</span>
+                    <span style='font-weight:700;color:#0f172a'>{act.get('action','')}</span>
                     <span style='font-size:0.8rem;color:{p_color};font-weight:600'>{p_label}</span>
                 </div>
-                <div style='display:flex;gap:16px;font-size:0.82rem;color:rgba(255,255,255,0.7)'>
+                <div style='display:flex;gap:16px;font-size:0.82rem;color:#475569'>
                     <span>📂 {act.get('category','')}</span>
                     <span>⏱️ {act.get('timeline','')}</span>
                     <span>🎯 {act.get('expected_impact','')}</span>
@@ -931,9 +947,9 @@ with tab7:
     st.markdown("<div class='section-header'>📊 Xuất Báo Cáo & Phân Tích Góp Ý AI</div>",
                 unsafe_allow_html=True)
     st.markdown("""
-    <div style='background:rgba(255,255,255,0.05);border-radius:12px;padding:14px 20px;
-                border:1px solid rgba(255,255,255,0.08);margin-bottom:16px;font-size:0.88rem;
-                color:rgba(255,255,255,0.85);line-height:1.7'>
+    <div style='background:rgba(255,107,0,0.04);border-radius:12px;padding:14px 20px;
+                border:1px solid rgba(255,107,0,0.15);margin-bottom:16px;font-size:0.88rem;
+                color:#334155;line-height:1.7'>
         📌 <b>Tính năng:</b> Điền tự động các chỉ số khảo sát vào mẫu báo cáo chuẩn FPT (<code>Form.xlsx</code>). 
         Nếu bạn chạy <b>phân tích gom nhóm ý kiến bằng AI</b> ở phần bên dưới, báo cáo tải về sẽ <b>tự động đính kèm thêm sheet "GOM NHÓM Ý KIẾN (AI)"</b>.
     </div>
@@ -1167,13 +1183,13 @@ with tab7:
                                 expanded=(sent == "negative"),
                             ):
                                 st.markdown(f"""
-                                <div style='background:rgba(245,158,11,0.12);border-left:4px solid #f59e0b;
+                                <div style='background:rgba(245,158,11,0.08);border-left:4px solid #f59e0b;
                                             border-radius:8px;padding:12px 16px;margin-bottom:12px'>
-                                    <div style='font-size:0.75rem;font-weight:700;color:#f59e0b;
+                                    <div style='font-size:0.75rem;font-weight:700;color:#d97706;
                                                 text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px'>
                                         ✍️ Tóm tắt chuyên gia
                                     </div>
-                                    <div style='color:#ffffff;line-height:1.65;font-size:0.9rem'>
+                                    <div style='color:#1e293b;line-height:1.65;font-size:0.9rem'>
                                         {group.get('summary','')}
                                     </div>
                                 </div>""", unsafe_allow_html=True)
@@ -1181,32 +1197,32 @@ with tab7:
                                 resp = group.get("suggested_response", "")
                                 if resp:
                                     st.markdown(f"""
-                                    <div style='background:rgba(16,185,129,0.1);border-left:4px solid #10b981;
+                                    <div style='background:rgba(16,185,129,0.08);border-left:4px solid #10b981;
                                                 border-radius:8px;padding:12px 16px;margin-bottom:12px'>
-                                        <div style='font-size:0.75rem;font-weight:700;color:#34d399;
+                                        <div style='font-size:0.75rem;font-weight:700;color:#047857;
                                                     text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px'>
                                             💬 Gợi ý phản hồi từ nhà trường
                                         </div>
-                                        <div style='color:#ffffff;line-height:1.65;font-size:0.9rem'>
+                                        <div style='color:#065f46;line-height:1.65;font-size:0.9rem'>
                                             {resp}
                                         </div>
                                     </div>""", unsafe_allow_html=True)
 
                                 originals = group.get("originals", [])
                                 if originals:
-                                    st.markdown(f"<div style='font-size:0.75rem;color:rgba(255,255,255,0.5);margin-bottom:6px'>📋 Ý kiến gốc ({len(originals)})</div>",
+                                    st.markdown(f"<div style='font-size:0.75rem;color:#64748b;margin-bottom:6px'>📋 Ý kiến gốc ({len(originals)})</div>",
                                                 unsafe_allow_html=True)
                                     for fb in originals:
                                         st.markdown(f"""
                                         <div style='display:flex;gap:10px;padding:8px 12px;
-                                                    border-bottom:1px solid rgba(255,255,255,0.06);font-size:0.85rem'>
-                                            <span style='background:rgba(96,165,250,0.15);color:#60a5fa;
+                                                    border-bottom:1px solid #e2e8f0;font-size:0.85rem'>
+                                            <span style='background:rgba(255,107,0,0.1);color:#d97706;
                                                          border-radius:12px;padding:2px 10px;white-space:nowrap;
                                                          font-size:0.75rem;font-weight:600;flex-shrink:0;
                                                          height:fit-content;margin-top:2px'>
                                                 {fb.get('question','')} · {fb.get('major','')}
                                             </span>
-                                            <span style='color:rgba(255,255,255,0.8);line-height:1.55'>{fb.get('content','')}</span>
+                                            <span style='color:#334155;line-height:1.55'>{fb.get('content','')}</span>
                                         </div>""", unsafe_allow_html=True)
 
                         # CSV Download button for grouped feedbacks
