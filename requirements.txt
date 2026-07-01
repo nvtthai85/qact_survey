@@ -1,0 +1,11 @@
+openai
+pandas
+openpyxl
+streamlit
+plotly
+python-dotenv
+wordcloud
+matplotlib
+langchain
+langchain-openai
+Pillow
